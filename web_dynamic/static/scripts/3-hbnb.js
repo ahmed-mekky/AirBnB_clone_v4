@@ -19,7 +19,7 @@ $(document).ready(function () {
     url: 'http://0.0.0.0:5001/api/v1/places_search/',
     type: 'POST',
     contentType: 'application/json',
-    data: JSON.stringify({}),
+    data: JSON.stringify({ amenitiesIds : Object.keys(amenitiesChecked)}),
     success: function (data) {
       for (let place of data) {
         let article = ['<div class="title_box">',
